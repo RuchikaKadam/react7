@@ -1,42 +1,77 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.movie-card {
+  margin: 20px;
+  padding: 20px;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), black;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px 1px rgba(116, 74, 74, 0.679);
+  display: flex;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.movie-image {
+  flex: 0 0 45%;
+  position: relative;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-image img {
+  width: 100%;
+  max-height:300px;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.movie-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 5px;
 }
 
-.card {
-  padding: 2em;
+.movie-details {
+  flex: 0 0 50%;
+  padding-left: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.banner img {
+  height: 100px;
+  margin-right: 10px;
+}
+.top-deets{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  /* align-content:; */
+  /* border: 2px solid red; */
+}
+
+.button-like {
+  display:inline-flex;
+  margin-right: 10%;
+  padding: 5px 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.description {
+  margin-bottom: 10px;
+}
+
+.icons {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.icons i {
+  margin-right: 5px;
 }
